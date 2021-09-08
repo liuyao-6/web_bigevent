@@ -44,7 +44,8 @@ $(function() {
                     }
                     layer.msg("注册成功,请登录");
                     $("#link_login").click();
-
+                    $(".layui-form [name=username]").val('');
+                    $(".layui-form [name=password]").val('');
                 }
             })
         })
@@ -66,7 +67,7 @@ $(function() {
                 // 将登陆成功的到的res.token保存到localStorage中
                 localStorage.setItem('token', res.token)
                     // 跳转到后台主页
-                    // location.href = '/index.html'
+                location.href = '/index.html'
             }
         })
 
